@@ -1,1 +1,68 @@
+# =========================================
+# AIM Report Automation Git Ignore
+# =========================================
+
+# ---- System & Editor Files ----
 .DS_Store
+Thumbs.db
+desktop.ini
+~$*
+*.tmp
+*.bak
+*.log
+
+# ---- OneDrive Sync Junk ----
+*.lnk
+*.tmp
+*.ini
+*.gid
+*.db
+*.sync
+*.crdownload
+*.part
+*.url
+*.tmp_driveupload
+*.icloud
+
+# ---- Python Environment & Cache ----
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.env/
+.envrc
+.idea/
+.vscode/
+*.egg-info/
+*.egg
+build/
+dist/
+
+# ---- Excel & Office Temporary Files ----
+*.xlk
+*.xlsb
+*.xlsx
+*.xlsm~
+*.lock
+~$*.xls*
+
+# ---- Output Files ----
+/Python/output/
+/Python/*.csv
+/Python/*.xlsx
+/Python/*.xlsm
+
+# ---- Mac and Windows Metadata ----
+ehthumbs.db
+Icon?
+.DS_Store?
+._*
+.Trashes
+.fseventsd
+.Spotlight-V100
+
+# ---- Junk from git itself ----
+.gitignore~
+.gitmodules~
+
