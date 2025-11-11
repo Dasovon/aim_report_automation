@@ -1,0 +1,28 @@
+# === Python ===
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.tmp
+*.bak
+
+# === Virtual environment ===
+Python/venv/
+
+# === Output and test files ===
+Python/output/
+Python/browse.csv
+Python/test.xlsx
+Python/utils/__pycache__/
+
+# === Excel and temporary workbooks ===
+~$*.xls*
+*.xlsx
+!Python/template.xlsm  # Keep your template
+
+# === macOS system files ===
+.DS_Store
+.AppleDouble
+.LSOverride
+
