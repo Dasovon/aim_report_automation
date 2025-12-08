@@ -93,9 +93,8 @@ Sub Run_AIM_Formatter()
         End If
 
         ' Default Inspection
-        ' --- Ensure every row starts as Pending ---
-        If Trim(NzStr(ws.Cells(i, inspectionCol).Value)) = "" Or _
-           NzStr(ws.Cells(i, inspectionCol).Value) = "Incomplete" Then
+        ' --- Only set Pending for empty cells to preserve existing user input ---
+        If Trim(NzStr(ws.Cells(i, inspectionCol).Value)) = "" Then
             ws.Cells(i, inspectionCol).Value = "Pending"
         End If
 
@@ -103,9 +102,6 @@ Sub Run_AIM_Formatter()
         ws.Cells(i, floorRankCol).Value = FloorRankVal(ws.Cells(i, floorCol).Value)
         ws.Cells(i, roomRankCol).Value = RoomRankVal(ws.Cells(i, roomCol).Value)
     Next i
-    
-    ' Reapply validation and pending defaults in case header values changed
-    ws.Range(ws.Cells(2, inspectionCol), ws.Cells(lastRow, inspectionCol)).Value = "Pending"
 
 
 AfterLoop:

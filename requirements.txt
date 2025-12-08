@@ -1,0 +1,11 @@
+# AIM Report Automation - Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# Data manipulation and analysis
+pandas>=2.0.0
+
+# Numerical computing (used for business day calculations)
+numpy>=1.24.0
+
+# Excel file manipulation with VBA preservation
+openpyxl>=3.1.0

@@ -106,8 +106,9 @@ def run_aim_formatter(csv_path, output_path=None):
     df["Inspection Status"] = "Pending"
     df.sort_values(by=["__FloorRank", "__RoomRank"], inplace=True)
 
-    # load template
-    template_path = os.path.expanduser("~/Desktop/excelProgram/Python/template.xlsm")
+    # load template (using relative path to this script's location)
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    template_path = os.path.join(script_dir, "template.xlsm")
     if not os.path.exists(template_path):
         raise FileNotFoundError(f"Template not found: {template_path}")
 
